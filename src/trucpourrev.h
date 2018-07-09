@@ -11,6 +11,6 @@
 using namespace std;
  void writequestionanswer();
  void choixaction();
-
+ void exodequestion()
 
 #endif /* TRUCPOURREV_H_ */

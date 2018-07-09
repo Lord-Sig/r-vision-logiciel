@@ -9,6 +9,7 @@
 #include <fstream>;
 #include <iostream>
 #include <vector>
+#include "list";
 using namespace std;
 
 /**
@@ -35,12 +36,13 @@ void choixaction(){
 	}
 
 }
-/*
+
 void exodequestion(){
+	int conteur = 0;
 	string question;
 	string reponse;
-	vector<string> questionL();
-	vector<string> reponseL();
+	string questionL;
+	string reponseL;
 	ifstream questionFlux("question.txt");  //Ouverture d'un fichier en lecture
 	ifstream reponseFlux("reponse.txt");
 
@@ -48,9 +50,12 @@ void exodequestion(){
 	{
 		while(getline(questionFlux,question)) //Tant qu'on n'est pas à la fin, on lit
 		      {
+			conteur+=1;
 				getline(reponseFlux,reponse);
-				questionL.push_back(question);
-
+				questionL += question;
+				questionL += "\t";
+				reponseL +=reponse;
+				reponseL +="\t";
 		      }
 
 	}
@@ -58,7 +63,7 @@ void exodequestion(){
 	{
 	    cout << "ERREUR: Impossible d'ouvrir le fichier en lecture  ou fichier inexistant" << endl;
 	}
-}*/
+}
 /**
  *
  */
